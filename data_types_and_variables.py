@@ -45,8 +45,8 @@ return price
 # bonus neither the username or password can start or end with whitespace
 username = 'codeup'
 password = 'notastrongpassword'
-min_length = password >= 5
-max_length = username <= 20
+min_length = len(password) >= 5
+max_length = len(username) <= 20
 is_same = username != password
 has_spaces = username[0] != ' ' and username[-1] != ' ' and password[0] != ' ' and password[-1] != ' '
 
