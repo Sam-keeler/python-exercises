@@ -30,7 +30,7 @@ is_full = class_attendants >= class_capacity
 # specific amount of products.
 discount = .8
 for items in cart:
-    if len(cart) >= 3 and offerdate > today() or premium_mem = True:
+    if len(cart) >= 3 and offerdate < today() or premium_mem = True:
         price = sum(cart) * discount
     else:
         price = sum(cart)
