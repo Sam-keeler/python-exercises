@@ -86,16 +86,16 @@ for i in range(1, 10):
 # (Hint: use the isdigit method on strings to determine this). 
 # Use a loop and the continue statement to output all the odd 
 # numbers between 1 and 50, except for the number the user entered.
-oodd_num = input("Give me an odd number between 0 and 50: ")
-while not odd_num.isdigit() and int(odd_num) > 0 and int(odd_num) < 50 and int(odd_num) % 2 != 0:
-    odd_num = input("Wrong. Give me an odd number between 0 and 50:")
-if odd_num.isdigit() and int(odd_num) > 0 and int(odd_num) < 50 and int(odd_num) % 2 != 0:
-    print("Number to skip is:" + " " + str(odd_num))
-    for i in range(1, 51, 2):
-        if int(odd_num) != i:
-            print("Here is an odd number:" + " " + str(i))
-        else:
-            print("Yikes! Skipping number" + " " + str(odd_num))
+while true:
+    odd_num = input("Give me an odd number between 0 and 50: ")
+    if odd_num.isdigit() and int(odd_num) > 0 and int(odd_num) < 50 and int(odd_num) % 2 != 0:
+        break
+print("Number to skip is:" + " " + str(odd_num))
+for i in range(1, 51, 2):
+    if int(odd_num) != i:
+        print("Here is an odd number:" + " " + str(i))
+    else:
+        print("Yikes! Skipping number" + " " + str(odd_num))
 
 
 
