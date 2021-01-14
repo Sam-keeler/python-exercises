@@ -82,7 +82,7 @@ def normalize_name(x):
     x = x.strip()
     x = x.lower()
     for y in x:
-        if y not in ('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz '):
+        if y not in ('abcdefghijklmnopqrstuvwxyz '):
             x = x.replace(y, '')
         if y == ' ':
             x = x.replace(y, '_')
