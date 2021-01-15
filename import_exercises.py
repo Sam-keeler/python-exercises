@@ -47,7 +47,6 @@ len([profile for profile in data if profile['isActive'] == False])
 
 # Grand total of balances for all users
 balances = [profile['balance'] for profile in data]
-temp = []
 for i in range(0, len(balances)):
     balances[i] = balances[i].replace('$', '')
     balances[i] = balances[i].replace(',', '')
