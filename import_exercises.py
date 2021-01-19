@@ -52,3 +52,54 @@ for i in range(0, len(balances)):
     balances[i] = balances[i].replace(',', '')
     balances[i] = float(balances[i])
 print(sum(balances))
+
+# Average balance per user
+balances = [profile['balance'] for profile in data]
+for i in range(0, len(balances)):
+    balances[i] = balances[i].replace('$', '')
+    balances[i] = balances[i].replace(',', '')
+    balances[i] = float(balances[i])
+print((sum(balances)/(len(balances))))
+
+# User with the lowest balance
+balances = [profile['balance'] for profile in data]
+for i in range(0, len(balances)):
+    balances[i] = balances[i].replace('$', '')
+    balances[i] = balances[i].replace(',', '')
+    balances[i] = float(balances[i])
+ind = balances.index(min(balances))
+print(data[ind]['name'])
+
+# User with the highest balance
+balances = [profile['balance'] for profile in data]
+for i in range(0, len(balances)):
+    balances[i] = balances[i].replace('$', '')
+    balances[i] = balances[i].replace(',', '')
+    balances[i] = float(balances[i])
+ind = balances.index(max(balances))
+print(data[ind]['name'])
+
+# Most common favorite fruit
+from collections import Counter
+fruits = [profile['favoriteFruit'] for profile in data]
+count = Counter(fruits)
+print(list(count.keys())[0])
+
+# Least most common favorite fruit
+from collections import Counter
+fruits = [profile['favoriteFruit'] for profile in data]
+count = Counter(fruits)
+print(list(count.keys())[-1])
+
+# Total number of unread messages for all users
+messages = [profile['greeting'] for profile in data]
+for message in messages:
+    for char in message:
+        if char not in ('0123456789'):
+            message = message.replace(char, '')
+for i in range(0, len(messages)):
+        messages[i] = int(messages[i])
+print(messages)
+
+
+
